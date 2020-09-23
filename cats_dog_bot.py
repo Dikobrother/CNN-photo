@@ -8,7 +8,7 @@ import keras
 IMG_SIZE = (160, 160)
 
 # ЗАГРУЗКА МОДЕЛИ
-new_model = keras.models.load_model('/Users/alexeyvaganov/doc/files/MobileNetV2_cat_dog.h5')
+new_model = keras.models.load_model('/home/ubuntu/resolution/MobileNetV2_cat_dog.h5')
 
 
 bot = telebot.TeleBot(config.token)
