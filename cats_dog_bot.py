@@ -17,8 +17,11 @@ bot = telebot.TeleBot(config.token)
 
 @bot.message_handler(content_types=['photo'])
 def handle_photo(message):
-    raw = message.photo[2].file_id
-    name = raw+".jpg"
+    try:
+        raw= message.photo[2].file_id
+    except:
+        raw= message.photo[0].file_id
+    name = "/home/vgnalex/cat_dog_bot/"+raw+".jpg"
     file_info = bot.get_file(raw)
     downloaded_file = bot.download_file(file_info.file_path)
     with open(name,'wb') as new_file:
