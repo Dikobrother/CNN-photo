@@ -1,0 +1,14 @@
+[Unit]
+Description=t_bot
+
+[Service]
+Type=simple
+#User=ubuntu
+#Group=ubuntu
+ExecStart=/usr/bin/python3 /home/ubuntu/cats_dog_bot.py
+#ExecStop=/bin/kill `/usr/bin/pgrep -u proxy3`
+#RemainAfterExit=yes
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
